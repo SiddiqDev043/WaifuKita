@@ -1,0 +1,590 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+
+:root {
+  --primary: #1b233d;
+  --bg: #081b29;
+}  
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg);
+  min-height: 3000px;
+}
+
+
+/*Navbar*/
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: transparent;
+  border-bottom: 1px solid #858585;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  font-style: italic;
+}
+
+.navbar .navbar-logo span {
+  color: #00abf0;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.navbar .navbar-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 650;
+  display: inline-block;
+  font-size: 1.3rem;
+  margin: 0 1rem;
+  transition: 0.3s;
+}
+
+.navbar .navbar-nav a:hover {
+  color: #01648b;
+}
+
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  justify-content: flex;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, #081b29 8%, rgba(6, 4, 32, 0) 50%);
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;  
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.hero .content h1 span {
+  color: #00abf0;
+}
+
+.hero .content h2 {
+  font-size: 2em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h2 span {
+  color: #00abf0;
+}
+
+.hero .content p {
+  font-size: 1.5em;
+  margin-top: 1rem;
+  line-height: 3.3rem;
+  font-weight: 400;
+  text-shadow: 7px 7px 10px rgba(1, 1, 3, 0.5);
+  color: #fff;
+}
+
+.hero .content .control {
+  display: flex;
+  justify-content: space-between;
+  width: 345;
+  height: 50px;
+}
+
+.hero .content .control a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 40px;
+  font-size: 1.4rem;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.hero .content .control a:hover {
+  color: #00abf0;
+}
+
+.hero .content control a:nth-child() {
+  background: transparent;
+  color: #00abf0;
+}
+
+.hero .content .control a:nth-child():hover {
+  color: #081b29;
+}
+
+.hero .content .control a:nth-child()::before {
+  background: #00abf0;
+}
+
+.hero .content .control a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #081b29;
+  z-index: -1;
+  transition: 0.5s;
+}
+
+.hero .content .control a:hover::before {
+  width: 100%;
+}
+
+/* About Section */
+
+.about,
+.menu,
+.pilihwaifu {
+  background-color: var(--bg) opacity(29%);
+  background-image: url("../img/bgcode.png");
+  padding: 8rem 7% 1.4rem;
+  color: #00abf0;
+}
+
+.about h2,
+.menu h2,
+.pilihwaifu h2 {
+  text-shadow: 3px 3px 4px black;
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h3,
+.pilihwaifu h3 {
+  text-shadow: 3px 3px 4px black;
+}
+
+.about p,
+.menu p,
+.pilihwaifu p {
+  text-shadow: 3px 3px 4px black;
+}
+
+
+
+.about h2 span,
+.menu h2 span,
+.pilihwaifu h2 span {
+  color: #fff;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 28rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 2rem;
+}
+
+.about .row .content h3 {
+  color: #00abf0;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  color: #fff;
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Menu Section */
+.menu h2 {
+  margin-bottom: 1rem;
+}
+.menu p,
+.pilihwaifu p {
+  font-size: 1.2rem;
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 1rem auto 0.5rem;
+}
+
+.menu .row .waifu-saya {
+  position: relative;
+  margin-top: 1px;
+  margin: 3rem auto 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 1em;
+  width: 800px;
+  height: 500px;
+  transition: all 400ms;
+}
+
+.menu .row .waifu-saya:hover .box {
+  filter: grayscale(100%) opacity(24%);
+}
+
+.box {
+  position: relative;
+  background: var(--waifu) center center;
+  background-size: cover;
+  transition: all 400ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .row .waifu-saya .box:hover {
+  filter: grayscale(0%) opacity(100%);
+}
+
+.menu .row .waifu-saya:has(.box-1:hover) {
+  grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.menu .row .waifu-saya:has(.box-2:hover) {
+  grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+.menu .row .waifu-saya:has(.box-3:hover) {
+  grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.menu .row .waifu-saya:has(.box-4:hover) {
+  grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.menu .row .waifu-saya:has(.box-5:hover) {
+  grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.menu .row .waifu-saya .box:nth-child(odd) {
+  transform: translateY(-16px);
+}
+
+.menu .row .waifu-saya .box:nth-child(even) {
+  transform: translateY(16px);
+}
+
+.menu .row .waifu-saya .box::after {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 20px;
+  background: #000;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  transform: translateY(60px);
+  opacity: 0;
+  transition: all 400ms;
+}
+
+.menu .row .waifu-saya .box:hover::after {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 400ms;
+}
+
+/* Bottom Pindah halaman Kaori */
+.menu .row .waifu-saya .box-1 .Kaorii h2{
+  position: relative;
+  margin-top: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  background: rgb(219, 219, 28);
+  border: 2px solid #666666;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  color: #646464;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+/* Bottom Pindah halaman Kobo */
+.menu .row .waifu-saya .box-3 .Koboo h2{
+  position: relative;
+  margin-top: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  background: #00abf0;
+  border: 2px solid #00abf0;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+/* Bottom Pindah halaman Zetaa */
+.menu .row .waifu-saya .box-2 .Zetaa h2{
+  position: relative;
+  margin-top: 150px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  background: grey;
+  border: 2px solid grey;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  color: #081b29;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+/* Bottom Pindah halaman Pansy */
+.menu .row .waifu-saya .box-4 .Pansy h2{
+  position: relative;
+  margin-top: 150px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  background: rgb(8, 7, 22);
+  border: 2px solid grey;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  color: #c56161;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+
+/* Bottom Pindah halaman Paimon */
+.menu .row .waifu-saya .box-5 .Paimonn h2{
+  position: relative;
+  margin-top: 40px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100%;
+  background: #0c0c31;
+  border: 2px solid rgb(201, 199, 199);
+  border-radius: 20px;
+  font-size: 1.4rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+.menu .row .waifu-saya .box-5 .Paimonn h2 span {
+  color: #000000;
+}
+
+
+.pilihwaifu .waifu {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+  justify-content: center;
+}
+
+
+.pilihwaifu .row .waifu-card {
+  text-align: center;
+  padding-bottom: 2.2rem;
+}
+
+.pilihwaifu .row .waifu-card img {
+  width: 70%;
+}
+
+.pilihwaifu .row .waifu-card .Ayunda {
+  margin: 1rem auto 0.3rem;
+}
+
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: grey;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: var(--bg);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+
+  .navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .content {
+    padding: 0;
+  }
+
+  .about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 1.6;
+  }
+
+  .menu p {
+    font-size: 1.6rem;
+  }
+  
+
+  .menu .row .waifu-saya {
+    position: relative;
+    margin-top: 1px;
+    margin: 3rem auto 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    width: 500px;
+    height: 400px;
+    transition: all 400ms;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
